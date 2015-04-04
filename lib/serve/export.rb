@@ -93,7 +93,7 @@ module Serve
         
         lines = IO.read(from_path).strip.split("\n")
         url = lines.pop.strip
-        contents = %{<html><head><meta http-equiv="refresh" content="0;#{url}" /></head></html>}
+        contents = %{<html><head><meta http-equiv="refresh" content="0; url=#{url}" /></head></html>}
         
         File.open(to_path, 'w+') { |f| f.puts contents }
         
