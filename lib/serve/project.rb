@@ -49,7 +49,7 @@ module Serve #:nodoc:
       if File.directory? "#{@location}/src"
         move_file 'src', 'stylesheets'
       elsif File.directory? "#{@location}/sass"
-        move_file 'sass', 'styleheets'
+        move_file 'sass', 'stylesheets'
       end
       install_javascript_framework @framework
       copy_readme
